@@ -1,4 +1,4 @@
-<template>
+<<template>
   <div class="language-stats">
     <h4>Language Stats</h4>
     <ul>
