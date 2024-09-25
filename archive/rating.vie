@@ -1,0 +1,36 @@
+<template>
+  <div>
+    <h1>Rate Us</h1>
+    <span v-for="star in stars" :key="star" @click="setRating(star)" class="star" :class="{ filled: star <= rating }">
+      ★
+    </span>
+    <p>Your rating: {{ rating }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      rating: 0,
+      stars: [1, 2, 3, 4, 5]
+    };
+  },
+  methods: {
+    setRating(star) {
+      this.rating = star;
+    }
+  }
+};
+</script>
+
+<style scoped>
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: grey;
+}
+.star.filled {
+  color: gold;
+}
+</style>
